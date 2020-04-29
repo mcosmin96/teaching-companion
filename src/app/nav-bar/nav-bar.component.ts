@@ -8,6 +8,8 @@ import { AuthService } from '../auth.service';
 })
 export class NavBarComponent implements OnInit {
 
+  title: string = 'Teaching Companion';
+
   constructor(public auth: AuthService) { }
 
   ngOnInit() {
