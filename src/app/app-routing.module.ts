@@ -8,6 +8,7 @@ import { AuthGuard } from './auth.guard'
 import { ProfileComponent } from './profile/profile.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ApiComponent } from './api/api.component';
+import { SessionComponent } from './session/session.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,11 @@ const routes: Routes = [
   {
     path: 'api',
     component: ApiComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'session',
+    component: SessionComponent,
     canActivate: [AuthGuard]
   }
 ];
