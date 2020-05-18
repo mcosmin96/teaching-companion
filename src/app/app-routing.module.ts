@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ApiComponent } from './api/api.component';
 import { SessionComponent } from './session/session.component';
+import { SessionPortalComponent } from './session-portal/session-portal.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,11 @@ const routes: Routes = [
   {
     path: 'session',
     component: SessionComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'session-portal',
+    component: SessionPortalComponent,
     canActivate: [AuthGuard]
   }
 ];

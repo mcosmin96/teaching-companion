@@ -11,6 +11,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ApiComponent } from './api/api.component';
 import { SessionComponent } from './session/session.component';
+import { SessionPortalComponent } from './session-portal/session-portal.component';
+import { PollComponent } from './session-elements/poll/poll.component';
+import { QuestionComponent } from './session-elements/question/question.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { SessionComponent } from './session/session.component';
     NavBarComponent,
     ProfileComponent,
     ApiComponent,
-    SessionComponent
+    SessionComponent,
+    SessionPortalComponent,
+    PollComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,9 @@
+<div style="display: block; width: 600px; height: 600px" *ngIf='signalRService.data'>
+    <canvas baseChart
+        [datasets]="signalRService.data"
+        [labels]="chartLabels"
+        [options]="chartOptions"
+        [legend]="chartLegend"
+        [chartType]="chartType"
+        [colors]="colors"></canvas>
+</div>

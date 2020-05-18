@@ -1,11 +1,22 @@
-<header>
-    <h1>{{title}}</h1>
-    &nbsp;
-    <button (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
-    <button (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
-    &nbsp;
-    <a routerLink="/">Home</a>&nbsp;
-    <a routerLink="profile" *ngIf="auth.loggedIn">Profile</a>&nbsp;
-    <a routerLink="api" *ngIf="auth.loggedIn">API</a>&nbsp;
-    <a routerLink="session" *ngIf="auth.loggedIn">session</a>
-</header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Teaching Companion</a>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="api" *ngIf="auth.loggedIn">Api Test</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/" *ngIf="auth.loggedIn">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="profile" *ngIf="auth.loggedIn">Profile</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="session-portal" *ngIf="auth.loggedIn">Session Portal</a>
+        </li>
+      </ul>
+      <button class="btn btn-outline-success my-2 my-sm-0" (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
+    </div>
+</nav>

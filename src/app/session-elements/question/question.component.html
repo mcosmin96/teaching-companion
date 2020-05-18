@@ -1,0 +1,12 @@
+<form action="/action_page.php">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" value="Anonymous" [(ngModel)]="signalRService.name"><br>
+    <label for="question">Question:</label><br>
+    <input type="text" id="question" name="question" value="" [(ngModel)]="signalRService.question"><br><br>
+    <input type="submit" value="Submit" (click)="askQ($event)">
+</form> 
+<br><br>
+<div class="alert alert-info" *ngFor="let question of signalRService.questions">
+    <button hidden="true" type="button" class="close" data-dismiss="alert">&times;</button>
+    {{question}}
+</div>
